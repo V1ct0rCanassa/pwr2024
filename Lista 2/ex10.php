@@ -1,22 +1,20 @@
 <?php
     
-do {
-    list($a, $b, $c) = explode(" ", readline());
-} while ($a < 0.0 or $b < 0.0 or $c < 0.0);
+$n = explode(" ", readline());
 
-if ($a < $b) {
-    list($a, $b) = array($b, $a);
+for($i = 0 ; $i < 3; $i++){
+    $n[$i] = (float) $n[$i];
 }
-if ($a < $c) {
-    list($a, $c) = array($c, $a);
-}
-if ($b < $c) {
-    list($b, $c) = array($c, $b);
-}
+rsort($n);
+
+
+$a = $n[0];
+$b = $n[1];
+$c = $n[2];
 
 if ($a >= $b + $c) {
     echo "NAO FORMA TRIANGULO\n";
-} else {
+}else {
     if ($a * $a == $b * $b + $c * $c) {
         echo "TRIANGULO RETANGULO\n";
     }
