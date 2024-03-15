@@ -11,8 +11,9 @@
             if($y > 0){
             $posneg = "POSITIVE";
             }else if($y < 0){
-            $parim = "NEGATIVE";
+            $posneg = "NEGATIVE";
             }
+            echo $parim . " " . $posneg . "\n";
         }else{
             echo "NULL\n";
         }
